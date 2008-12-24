@@ -64,9 +64,9 @@ jQuery(document).ready(function() {
 		
 		jQuery("#"+last_edited+" a:first").after("<small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
 			+ "| <b onClick='javascript:open_blank(\""+jQuery("#"+last_edited+" a:first").attr("rel")+"\");' class='link'><? print __("View");?><\/b> "
-			+ "| <b onClick='document.location.href=\"admin.php?page=explore_pages/explore_pages.php&createin=1&post_parent="+jQuery("#"+last_edited).attr("rel")+"\";' class='link'><? print __("Add");?><\/b> "
+			+ "| <b onClick='document.location.href=\"admin.php?page=explore-pages/explore_pages.php&createin=1&post_parent="+jQuery("#"+last_edited).attr("rel")+"\";' class='link'><? print __("Add");?><\/b> "
 			+ "| <b onClick='document.location.href=\"page.php?action=edit&post="+jQuery("#"+last_edited).attr("rel")+"\";' class='link'><? print __("Edit");?><\/b> "
-			+ "| <b onClick='if(confirm(\"Do you realy want to delete this page?\")) {document.location.href=\"admin.php?page=explore_pages/explore_pages.php&delete="+jQuery("#"+last_edited).attr("rel")+"\";}' class='link' style='color: red;'><? print __("Delete");?><\/b><\/small>");
+			+ "| <b onClick='if(confirm(\"Do you realy want to delete this page?\")) {document.location.href=\"admin.php?page=explore-pages/explore_pages.php&delete="+jQuery("#"+last_edited).attr("rel")+"\";}' class='link' style='color: red;'><? print __("Delete");?><\/b><\/small>");
 		
 		
 	}}});
@@ -88,7 +88,7 @@ function explore_pages_it() {
 		if ( !wp_delete_post($id) ) 
 			wp_die( __('Error when deleting post...') );
 		
-		print "<script type='text/javascript'>document.location.href='admin.php?page=explore_pages/explore_pages.php&opento=$par&message=".urlencode("Page deleted success")."';</script>";
+		print "<script type='text/javascript'>document.location.href='admin.php?page=explore-pages/explore_pages.php&opento=$par&message=".urlencode("Page deleted success")."';</script>";
 		exit();
 	}
 	
@@ -108,7 +108,7 @@ function explore_pages_it() {
 		);
 		$newid = wp_insert_post($newpage);
 		if ($newid) {
-			print "<script type='text/javascript'>document.location.href='admin.php?page=explore_pages/explore_pages.php&opento=$par&message=".urlencode("".__("Page added success")." <a href='page.php?action=edit&post=".$newid."'>".__("Edit")."</a>")."';</script>";
+			print "<script type='text/javascript'>document.location.href='admin.php?page=explore-pages/explore_pages.php&opento=$par&message=".urlencode("".__("Page added success")." <a href='page.php?action=edit&post=".$newid."'>".__("Edit")."</a>")."';</script>";
 		} else {
 			wp_die( __('Can\'t create post post...') );
 		}
@@ -139,11 +139,7 @@ function explore_pages_it() {
 		$p_title = "Root";
 	}
 	
-	print "<h3><a href='admin.php?page=explore_pages/explore_pages.php&createin=1&post_parent=".$parent."'>Create page in \"".$p_title."\"</a></h3>";
-	if ($parent != 0) {
-		$upid = $wpdb->get_var("SELECT post_parent FROM $wpdb->posts WHERE `ID`='".$parent."' LIMIT 1 ;");
-		print "<h3><a href='admin.php?page=explore_pages.php&parent=".$upid."'>&uarr;.. (Level up)</a></h3>";
-	}
+	print "<h3><a href='admin.php?page=explore-pages/explore_pages.php&createin=1&post_parent=".$parent."'>Create page in \"".$p_title."\"</a></h3>";
 
 	print "<div id='explore_pages-tree'>";
 	explore_pages_make_tree($parent);
