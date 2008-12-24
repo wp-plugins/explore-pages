@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Explore pages ===
 Contributors: mbyte
 Tags: explore, pages, admin
 Requires at least: 2.5
