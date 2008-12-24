@@ -36,10 +36,10 @@ function explore_pages_amenu() {
 
 function explore_pages_head() {
 	?>
-<link rel="stylesheet" type="text/css" href="../wp-content/plugins/explore_pages/tree/tree_component.css" />
-<script type="text/javascript" src="../wp-content/plugins/explore_pages/tree/css.js"></script>
-<script type="text/javascript" src="../wp-content/plugins/explore_pages/tree/jquery.listen.js"></script>
-<script type="text/javascript" src="../wp-content/plugins/explore_pages/tree/tree_component.js"></script>
+<link rel="stylesheet" type="text/css" href="../wp-content/plugins/explore-pages/tree/tree_component.css" />
+<script type="text/javascript" src="../wp-content/plugins/explore-pages/tree/css.js"></script>
+<script type="text/javascript" src="../wp-content/plugins/explore-pages/tree/jquery.listen.js"></script>
+<script type="text/javascript" src="../wp-content/plugins/explore-pages/tree/tree_component.js"></script>
 <script type="text/javascript">
 
 var last_edited = "";
