@@ -3,7 +3,7 @@
 Plugin Name: Explore pages
 Plugin URI: http://mbyte.org.ua/
 Description: explorer-like page navigation.
-Version: 1.0
+Version: 1.01
 Author: mByte
 Author URI: http://mbyte.org.ua/personal/
 */
