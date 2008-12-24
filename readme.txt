@@ -2,7 +2,7 @@
 Contributors: mbyte
 Tags: explore, pages, admin
 Requires at least: 2.5
-Tested up to: 2.5
+Tested up to: 2.7
 
 Explorer-like plugin for walking through the pages
 
