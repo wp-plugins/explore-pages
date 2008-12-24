@@ -35,6 +35,7 @@ function explore_pages_amenu() {
 }
 
 function explore_pages_head() {
+if (preg_match("/explore\_pages/",$_SERVER['REQUEST_URI'])) {
 	?>
 <link rel="stylesheet" type="text/css" href="../wp-content/plugins/explore-pages/tree/tree_component.css" />
 <script type="text/javascript" src="../wp-content/plugins/explore-pages/tree/css.js"></script>
@@ -74,6 +75,7 @@ jQuery(document).ready(function() {
 
 </script>
 <?
+}
 }
 
 function explore_pages_it() {
